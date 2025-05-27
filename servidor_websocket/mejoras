@@ -1,0 +1,5 @@
+vamos a hacer, y olvidas lo que te haya dicho y solo me haces caso, estas cosas y en este orden:
+1: Readme final,
+2 Boton de descarga de cierto log de cierto dia en algun formato, o log o txt o lo que sea
+3 importar grupos desde una lista royo csv, que tenga aunque sean 100 campos, separados por comas, el primer campo o la primera cosa sera el nombre del grupo, los siguientes seran los usuarios, si?? 
+4: Importar el gunicorn o waitress como servidor WSGI segun me digas tu que es mejor o tal, si quieres explicame un poco ahora modo bobos

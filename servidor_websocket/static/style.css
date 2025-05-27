@@ -1,0 +1,484 @@
+/* ================= RESET & VARIABLES ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-green: #27ae60;
+  --dark-green: #229954;
+  --light-green: #2ecc71;
+  --header-start: #229954;
+  --header-end: #2ecc71;
+  --white: #fff;
+  --grey: #f3f3f3;
+}
+
+/* ================= GENERAL ================= */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--grey);
+  color: #222;
+  line-height: 1.4;
+}
+
+/* Header con degradado */
+.main-header {
+  background: linear-gradient(to right, var(--header-start), var(--header-end));
+  color: var(--white);
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.main-header .title {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* ================= LOGIN ================= */
+.body-bloqueado {
+  overflow: hidden !important;
+  height: 100vh;
+}
+
+#loginModal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#loginModal .modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+  position: relative;
+}
+
+#loginModal h2 {
+  margin-bottom: 20px;
+}
+
+#loginModal input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+#loginModal .btn {
+  width: 100%;
+}
+
+#loginError {
+  color: red;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* ================= SECCIÓN GLOBAL MESSAGE ================= */
+.global-message-section {
+  background-color: #fff;
+  margin: 0 auto 20px auto;
+  max-width: 800px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.global-message-section h2 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.global-message-section p {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.predefined-phrases-admin {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+#frasesPredefinidas {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+#mensajeGlobalTextarea {
+  width: 100%;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+
+/* ================= TABS ================= */
+.tabs-menu {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.tab-button {
+  background-color: #eee;
+  color: #333;
+  padding: 10px 30px;
+  border: none;
+  margin: 0 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s ease;
+  font-size: 1rem;
+}
+
+.tab-button:hover {
+  background-color: #ddd;
+}
+
+.tab-button.active {
+  background-color: var(--dark-green);
+  color: var(--white);
+}
+
+.tab-content {
+  display: none;
+}
+
+/* ================= SECCIONES ================= */
+.section-title {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.clientes-container {
+  display: flex;
+  gap: 40px;
+  margin: 0 auto 20px auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 900px;
+}
+
+.subsection {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
+
+/* ================= LISTAS DE CLIENTES ================= */
+.client-list {
+  list-style: none;
+  padding: 0;
+}
+
+.client-list li {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  transition: 0.2s background-color;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.log-info     { background-color: #fdfdfd; }     /* Gris claro */
+.log-danger   { background-color: #e7fbe9; }     /* Rojo clarito */
+.log-warning  { background-color: #fff9e6; }     /* Amarillo */
+.log-success  { background-color: #fde8e8; }     /* Verde suave */
+
+.client-list li:hover {
+  background-color: #f0f0f0;
+}
+
+/* ================= BOTONES ================= */
+.btn {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 5px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+
+.btn-sm {
+  font-size: 0.85rem;
+  padding: 6px 10px;
+}
+
+.btn-primary {
+  background-color: var(--main-green);
+  color: var(--white);
+}
+.btn-primary:hover {
+  background-color: var(--dark-green);
+}
+
+.btn-secondary {
+  background-color: #bbb;
+  color: #333;
+}
+.btn-secondary:hover {
+  background-color: #999;
+}
+
+.btn-success {
+  background-color: #1abc9c;
+  color: var(--white);
+}
+.btn-success:hover {
+  background-color: #16a085;
+}
+
+.btn-danger {
+  background-color: #e74c3c;
+  color: var(--white);
+}
+.btn-danger:hover {
+  background-color: #c0392b;
+}
+
+/* ================= MODALES ================= */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 9999; /* 👈 Asegura que esté por encima de todo */
+}
+
+.modal-content {
+  background-color: var(--white);
+  margin: 60px auto;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 480px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  animation: fadeIn 0.2s ease;
+  transform: translateY(-20%);
+}
+
+#infoGrupoContenido ul li {
+  padding: 6px;
+  background: #f5f5f5;
+  margin: 4px 0;
+  border-radius: 6px;
+}
+
+.close-btn {
+  color: #aaa;
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ================= GRUPOS ================= */
+#gruposContainer {
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+#gruposContainer > div {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 12px;
+  margin: 16px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#gruposContainer > div > *:not(:first-child) {
+  margin-left: 15px;
+}
+
+#gruposContainer > div strong {
+  font-size: 1.1rem;
+  color: var(--dark-green);
+}
+
+.groups-button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+/* Oculta cualquier elemento visualmente */
+.oculto {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+/* ================= ESTADOS ================= */
+.status-indicator {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 8px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.status-indicator.online {
+  background-color: #27ae60;
+}
+.status-indicator.offline {
+  background-color: #e74c3c;
+}
+.modal:not(.oculto) {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+.alerta-seguridad {
+  background-color: #ffefc4;
+  color: #856404;
+  padding: 12px 20px;
+  margin: 10px auto;
+  border: 1px solid #ffeeba;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  max-width: 600px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+/* Prioridad más alta para el modal de mensajes */
+#mensajeModal {
+  z-index: 10000;
+}
+/* Más margen entre filas */
+#logsBody tr {
+  line-height: 0.8em;
+  padding: 10px 0;
+}
+
+/* Desplaza toda la tabla un poco a la izquierda */
+#logsBody {
+  margin-left: -100px;
+}
+#logsBody td {
+  padding: 6px 10px;
+}
+#logsBody td:nth-child(3) {
+  max-width: 450px;
+  white-space: normal;
+  word-break: break-word;
+}
+#logsContainer {
+  max-height: 500px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px;
+  background: #f9f9f9;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  margin-top: 10px;
+
+  /* 🆕 Nuevo ancho */
+  max-width: 800px;
+}
+/* Loader visual */
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.4s ease;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #ddd;
+  border-top-color: var(--main-green);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

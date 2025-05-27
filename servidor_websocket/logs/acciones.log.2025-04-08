@@ -1,0 +1,79 @@
+2025-04-08 09:33:27,715 - admin - ha iniciado sesión
+2025-04-08 09:33:27,716 - admin - ha iniciado sesión
+2025-04-08 09:52:10,526 - marin - ha iniciado sesión
+2025-04-08 09:52:10,529 - marin - ha iniciado sesión
+2025-04-08 09:52:32,480 - marin - envió mensaje global: 'Hola 123'
+2025-04-08 09:52:32,481 - marin - envía mensaje global: 'Hola 123' → ❌ no había clientes conectados
+2025-04-08 09:52:44,550 - marin - ha iniciado sesión
+2025-04-08 09:52:44,552 - marin - ha iniciado sesión
+2025-04-08 12:19:06,937 - marin - envió mensaje global: 'hola'
+2025-04-08 12:19:06,941 - marin - envía mensaje global: 'hola' → destinatarios reales: 777
+2025-04-08 12:23:22,216 - marin - envió mensaje global: 'perfeccccto'
+2025-04-08 12:23:22,218 - marin - envía mensaje global: 'perfeccccto' → destinatarios reales: 777
+2025-04-08 12:23:26,624 - marin - ha cerrado sesión
+2025-04-08 12:23:31,434 - admin - ha iniciado sesión
+2025-04-08 12:23:31,437 - admin - ha iniciado sesión
+2025-04-08 13:35:28,617 - marin - ha iniciado sesión
+2025-04-08 13:35:28,621 - marin - ha iniciado sesión
+2025-04-08 13:35:33,105 - marin - envió mensaje a 10.40.253.176_777: 'holi'
+2025-04-08 13:35:33,108 - marin - envía mensaje a 777: 'holi'
+2025-04-08 13:45:25,120 - marin - envió mensaje a 10.40.253.176_565: 'hola bobo'
+2025-04-08 13:45:25,122 - marin - envía mensaje a 565: 'hola bobo'
+2025-04-08 13:45:37,772 - marin - ha cerrado sesión
+2025-04-08 13:45:42,578 - admin - ha iniciado sesión
+2025-04-08 13:45:42,581 - admin - ha iniciado sesión
+2025-04-08 13:50:35,886 - marin - ha iniciado sesión
+2025-04-08 13:50:35,896 - marin - ha iniciado sesión
+2025-04-08 13:56:24,637 - marin - ha cerrado sesión
+2025-04-08 13:56:28,918 - viktor - ha iniciado sesión
+2025-04-08 13:56:28,922 - viktor - ha iniciado sesión
+2025-04-08 15:16:27,007 - viktor - ha cerrado sesión
+2025-04-08 15:17:53,932 - marin - ha iniciado sesión
+2025-04-08 15:17:53,936 - marin - ha iniciado sesión
+2025-04-08 15:18:17,122 - marin - actualizó las frases predefinidas
+2025-04-08 15:18:28,352 - viktor - ha iniciado sesión
+2025-04-08 15:18:28,384 - viktor - ha iniciado sesión
+2025-04-08 15:19:09,426 - viktor - ha cerrado sesión
+2025-04-08 15:19:16,027 - admin - ha iniciado sesión
+2025-04-08 15:19:16,059 - admin - ha iniciado sesión
+2025-04-08 15:20:03,254 - admin - ha iniciado sesión
+2025-04-08 15:20:03,262 - admin - ha iniciado sesión
+2025-04-08 15:20:16,517 - admin - creó el usuario pedrito
+2025-04-08 15:20:25,740 - pedrito - ha iniciado sesión
+2025-04-08 15:20:25,753 - pedrito - ha iniciado sesión
+2025-04-08 15:21:37,066 - pedrito - envió mensaje global: 'Hola al mensaje de prueba del video'
+2025-04-08 15:21:37,069 - pedrito - envía mensaje global: 'Hola al mensaje de prueba del video' → destinatarios reales: 433
+2025-04-08 15:21:51,852 - pedrito - envió mensaje a 10.40.253.176_433: 'hola?'
+2025-04-08 15:21:51,856 - pedrito - envía mensaje a 433: 'hola?'
+2025-04-08 15:22:07,132 - pedrito - envió mensaje a 10.40.253.176_433: 'hola?'
+2025-04-08 15:22:07,138 - pedrito - envía mensaje a 433: 'hola?'
+2025-04-08 15:22:18,130 - pedrito - envió mensaje global: 'Real de madrid loco'
+2025-04-08 15:22:18,136 - pedrito - envía mensaje global: 'Real de madrid loco' → destinatarios reales: 433
+2025-04-08 15:22:19,776 - pedrito - envió mensaje global: 'fef'
+2025-04-08 15:22:19,779 - pedrito - envía mensaje global: 'fef' → destinatarios reales: 433
+2025-04-08 15:22:21,251 - pedrito - ha cerrado sesión
+2025-04-08 15:22:25,327 - admin - ha iniciado sesión
+2025-04-08 15:22:25,335 - admin - ha iniciado sesión
+2025-04-08 16:51:14,610 - pedrito - ha iniciado sesión
+2025-04-08 16:51:14,613 - pedrito - ha iniciado sesión
+2025-04-08 16:51:21,037 - pedrito - envió mensaje a 10.40.253.176_173: 'hola hermoso'
+2025-04-08 16:51:21,039 - pedrito - envía mensaje a 173: 'hola hermoso'
+2025-04-08 16:51:30,748 - pedrito - envió mensaje global: 'ola bello'
+2025-04-08 16:51:30,751 - pedrito - envía mensaje global: 'ola bello' → destinatarios reales: 173
+2025-04-08 17:08:24,019 - pedrito - envió mensaje global: 'holisss'
+2025-04-08 17:08:24,025 - pedrito - envía mensaje global: 'holisss' → destinatarios reales: 173
+2025-04-08 17:08:31,598 - pedrito - envió mensaje a 10.40.253.176_173: 'hola precioso'
+2025-04-08 17:08:31,600 - pedrito - envía mensaje a 173: 'hola precioso'
+2025-04-08 17:09:09,360 - pedrito - ha iniciado sesión
+2025-04-08 17:09:09,363 - pedrito - ha iniciado sesión
+2025-04-08 17:09:44,595 - pedrito - envió mensaje global: 'g'
+2025-04-08 17:09:44,597 - pedrito - envía mensaje global: 'g' → ❌ no había clientes conectados
+2025-04-08 17:11:04,773 - pedrito - envió mensaje global: '2?'
+2025-04-08 17:11:04,775 - pedrito - envía mensaje global: '2?' → ❌ no había clientes conectados
+2025-04-08 17:12:11,051 - pedrito - envió mensaje global: '3?'
+2025-04-08 17:12:11,054 - pedrito - envía mensaje global: '3?' → destinatarios reales: 173
+2025-04-08 17:54:19,032 - pedrito - ha iniciado sesión
+2025-04-08 17:54:19,036 - pedrito - ha iniciado sesión
+2025-04-08 17:54:33,215 - pedrito - elimina cliente del historial: 10.186.147.176_Anitta
+2025-04-08 17:56:37,338 - pedrito - envió mensaje global: 'f'
+2025-04-08 17:56:37,339 - pedrito - envía mensaje global: 'f' → destinatarios reales: 173

@@ -1,0 +1,22 @@
+[
+    {
+        "usuario": "admin",
+        "hash": "$2b$12$DAUyEPiwE79uQmpuhoUeBuKugFhaHZrfeP73lozpFCIxxTCaE0wAS"
+    },
+    {
+        "usuario": "viktor",
+        "hash": "$2b$12$k1DDZnoiE7bbjuVWSSAgLOKehXtcsWRWSyGwVs8Nxp7IhO86RH7hi"
+    },
+    {
+        "usuario": "marin",
+        "hash": "$2b$12$pHCjls3T6KlEe1vUdX7cKOORC8V2WzG0GhnxCYg9k6ikYQvmiVqDW"
+    },
+    {
+        "usuario": "pedrito",
+        "hash": "$2b$12$ueP8Q47ungIGiaxTr5h4r.o09TTF5XuXO0PjRZa.Jg6Jns4zGLMx."
+    },
+    {
+        "usuario": "cubo",
+        "hash": "$2b$12$.G8vKsUk1Z4v56rHb16zKuT4Zrf0HWwe/fmSHzua9nmnKwaVc1vDq"
+    }
+]

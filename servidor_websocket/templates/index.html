@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Panel de Notificaciones Farmacias</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="{{ url_for('main.favicon') }}" type="image/x-icon">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</head>
+<body>
+  <div id = "contenido" style="display: none;">
+  <header class="main-header">
+    <h1 class="title">Panel de Notificaciones en Tiempo Real</h1>
+    <div id="loginStatus" class="login-status"></div>
+  </header>
+  
+  <div style="text-align: right; padding: 10px 20px;">
+    <span id="userDisplay" style="margin-right: 10px; font-weight: bold;"></span>
+    <button id="loginBtn" class="btn btn-primary btn-sm">Iniciar sesión</button>
+    <button id="logoutBtn" class="btn btn-secondary btn-sm" style="display:none;">Cerrar sesión</button>
+  </div>
+
+  <div id="globalMessageSection" class="global-message-section">
+    <h2>Mensaje Global a Todos</h2>
+    <p>Elige una frase predefinida o escribe tu propio mensaje para enviarlo a todos.</p>
+    <div class="predefined-phrases-admin">
+      <select id="frasesPredefinidas" onchange="applyPredefinedPhrase()">
+        <option value="">Frase predefinida (opcional)</option>
+      </select>
+      <button class="btn btn-secondary btn-sm" onclick="openManagePhrasesModal()">
+        <i class="fas fa-cog"></i> Administrar Frases
+      </button>
+    </div>
+    <textarea id="mensajeGlobalTextarea" rows="3" placeholder="Escribe aquí tu mensaje..."></textarea>
+    <button class="btn btn-primary" onclick="sendGlobalMessage()">
+      <i class="fas fa-paper-plane"></i> Enviar Mensaje Global
+    </button>
+  </div>
+
+  <div class="tabs-menu">
+    <button class="tab-button active" onclick="openTab('clientesTab', this)">
+      <i class="fas fa-users"></i> Clientes
+    </button>
+    <button class="tab-button" onclick="openTab('gruposTab', this)">
+      <i class="fas fa-object-group"></i> Grupos
+    </button>
+  </div>
+
+  <div id="clientesTab" class="tab-content" style="display: block;">
+    <h2 class="section-title">Lista de Clientes</h2>
+    <div class="clientes-container">
+      <div class="subsection">
+        <h3>Conectados</h3>
+        <ul id="conectadosList" class="client-list"></ul>
+      </div>
+      <div class="subsection">
+        <h3>Desconectados</h3>
+        <ul id="desconectadosList" class="client-list"></ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="gruposTab" class="tab-content" style="display: none;">
+    <h2 class="section-title">Lista de Grupos</h2>
+  
+    <!-- 🔒 Botón de crear grupo oculto: solo se crean grupos por CSV -->
+    <div class="groups-button-container" style="display: none;">
+      <button class="btn btn-success" onclick="openCrearGrupoModal()">
+        <i class="fas fa-plus"></i> Crear Nuevo Grupo
+      </button>
+    </div>
+  
+    <div id="gruposContainer"></div>
+  </div>
+  
+
+  <!-- ===== MODALES ===== -->
+  <div id="loginModal" class="modal oculto">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('loginModal')">&times;</span>
+      <h2>Iniciar Sesión</h2>
+      <label for="usuario">Usuario:</label>
+      <input type="text" id="usuario" placeholder="Tu usuario">
+      <label for="contrasena">Contraseña:</label>
+      <input type="password" id="contrasena" placeholder="Tu contraseña">
+      <div class="modal-buttons">
+        <button class="btn btn-primary" onclick="login()">Entrar</button>
+        <button class="btn btn-secondary" onclick="closeModal('loginModal')">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="mensajeModal" class="modal oculto">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('mensajeModal')">&times;</span>
+      <h2 id="mensajeModalTitulo"></h2>
+      <p id="mensajeModalTexto"></p>
+      <div class="modal-buttons">
+        <button class="btn btn-primary" onclick="closeModal('mensajeModal')">Aceptar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="mensajeClienteModal" class="modal oculto">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('mensajeClienteModal')">&times;</span>
+      <h2>Mensaje Privado</h2>
+      <p>Enviando a: <span id="clienteObjetivo"></span></p>
+      <textarea id="mensajeClienteTextarea" rows="4"></textarea>
+      <div class="modal-buttons">
+        <button class="btn btn-primary" onclick="sendPrivateMessage()">Enviar</button>
+        <button class="btn btn-secondary" onclick="closeModal('mensajeClienteModal')">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="eliminarClienteModal" class="modal oculto">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('eliminarClienteModal')">&times;</span>
+      <h2>Eliminar Cliente</h2>
+      <p id="mensajeEliminarCliente"></p>
+      <div class="modal-buttons">
+        <button class="btn btn-danger" onclick="deleteCliente()">Eliminar</button>
+        <button class="btn btn-secondary" onclick="closeModal('eliminarClienteModal')">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="crearGrupoModal" class="modal oculto">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('crearGrupoModal')">&times;</span>
+      <h2>Crear Grupo</h2>
+      <input id="nuevoGrupoNombre" placeholder="Nombre del grupo" />
+      <input id="nuevoGrupoMiembros" placeholder="Miembros separados por coma" />
+      <div class="modal-buttons">
+        <button class="btn btn-success" onclick="createGroup()">Crear</button>
+        <button class="btn btn-secondary" onclick="closeModal('crearGrupoModal')">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="editarGrupoModal" class="modal oculto">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('editarGrupoModal')">&times;</span>
+      <h2>Editar Grupo</h2>
+      <p id="editarGrupoNombreActual"></p>
+      <input id="editarGrupoNuevoNombre" placeholder="Nuevo nombre" />
+      <input id="editarGrupoMiembros" placeholder="Miembros separados por coma" />
+      <div class="modal-buttons">
+        <button class="btn btn-primary" onclick="editGroup()">Guardar</button>
+        <button class="btn btn-secondary" onclick="closeModal('editarGrupoModal')">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="eliminarGrupoModal" class="modal oculto">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('eliminarGrupoModal')">&times;</span>
+      <h2>Eliminar Grupo</h2>
+      <p id="mensajeEliminarGrupo"></p>
+      <div class="modal-buttons">
+        <button class="btn btn-danger" onclick="deleteGroup()">Eliminar</button>
+        <button class="btn btn-secondary" onclick="closeModal('eliminarGrupoModal')">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="mensajeGrupoModal" class="modal oculto">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('mensajeGrupoModal')">&times;</span>
+      <h2>Mensaje a Grupo</h2>
+      <p>Enviando a: <span id="grupoObjetivo"></span></p>
+      <textarea id="mensajeGrupoTextarea" rows="4"></textarea>
+      <div class="modal-buttons">
+        <button class="btn btn-primary" onclick="sendGroupMessage()">Enviar</button>
+        <button class="btn btn-secondary" onclick="closeModal('mensajeGrupoModal')">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="infoGrupoModal" class="modal oculto">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('infoGrupoModal')">&times;</span>
+      <h2>Información del Grupo</h2>
+      <div id="infoGrupoContenido"></div>
+      <div class="modal-buttons">
+        <button class="btn btn-secondary" onclick="closeModal('infoGrupoModal')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="managePhrasesModal" class="modal oculto">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('managePhrasesModal')">&times;</span>
+      <h2>Administrar Frases Predefinidas</h2>
+      <div id="phrasesListContainer"></div>
+      <input id="newPhraseInput" placeholder="Nueva frase" />
+      <div class="modal-buttons">
+        <button class="btn btn-success btn-sm" onclick="addPhrase()">Añadir Frase</button>
+        <button class="btn btn-secondary" onclick="closeModal('managePhrasesModal')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+
+  {% with mensajes = get_flashed_messages() %}
+  {% if mensajes %}
+    <div id="alertaSeguridad" class="alerta-seguridad">
+      {{ mensajes[0] }}
+    </div>
+  {% endif %}
+  {% endwith %}
+  </div>
+  <!-- Loader de carga inicial -->
+<div id="loader" class="loader-overlay">
+  <div class="spinner"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+2025-04-23 10:33:05,424 - marin - envía mensaje global: 'Hola Video' → destinatarios reales: ClienteVideo
+2025-04-23 10:33:20,753 - marin - envía mensaje a ClienteVideo: 'Hola privado'
+2025-04-23 12:30:17,471 - viktor - ha iniciado sesión
+2025-04-23 12:30:17,723 - viktor - ha iniciado sesión
+2025-04-23 12:32:19,622 - pedrito - ha iniciado sesión
+2025-04-23 12:32:19,872 - pedrito - ha iniciado sesión
+2025-04-23 12:33:53,829 - pedrito - envió mensaje global: 'holi generalllll!!!'
+2025-04-23 12:34:06,543 - pedrito - envía mensaje global: 'holi generalllll!!!' → destinatarios reales: ClienteVideo
+2025-04-23 12:34:15,841 - pedrito - envió mensaje a 172.17.204.176_ClienteVideo: 'hola desde privado!!!'
+2025-04-23 12:34:31,491 - pedrito - envía mensaje a ClienteVideo: 'hola desde privado!!!'
+2025-04-23 12:46:45,351 - cubo - ha iniciado sesión
+2025-04-23 12:46:45,606 - cubo - ha iniciado sesión
+2025-04-23 12:47:52,990 - cubo - envió mensaje a 172.17.204.176_ClienteVideo: 'si?'
+2025-04-23 12:48:01,454 - cubo - envía mensaje a ClienteVideo: 'si?'
+2025-04-23 12:48:21,460 - cubo - envió mensaje a grupo SuperGrupo: 'olier' → destinatarios reales: 
+2025-04-23 12:52:39,371 - cubo - ha iniciado sesión
+2025-04-23 12:52:39,614 - cubo - ha iniciado sesión
+2025-04-23 12:52:42,021 - cubo - ha cerrado sesión
+2025-04-23 12:52:48,905 - marin - ha iniciado sesión
+2025-04-23 12:52:49,149 - marin - ha iniciado sesión
+2025-04-23 12:52:54,333 - marin - envió mensaje a 172.17.204.176_ClienteVideo: 'priv'
+2025-04-23 12:53:10,312 - marin - envía mensaje a ClienteVideo: 'priv'
+2025-04-23 12:53:14,131 - marin - envió mensaje global: 'w'
+2025-04-23 12:53:17,302 - marin - envía mensaje global: 'w' → destinatarios reales: ClienteVideo
+2025-04-23 12:53:30,321 - marin - envió mensaje a grupo SuperGrupo: 'supergrupoddd' → destinatarios reales: ClienteVideo
+2025-04-23 12:53:34,658 - marin - ha cerrado sesión
+2025-04-23 13:11:51,076 - marin - ha iniciado sesión
+2025-04-23 13:11:51,337 - marin - ha iniciado sesión
+2025-04-23 13:11:55,818 - marin - elimina cliente del historial: 10.186.147.176_Montoya
+2025-04-23 13:20:38,326 - cubo - ha iniciado sesión
+2025-04-23 13:20:38,572 - cubo - ha iniciado sesión
+2025-04-23 13:22:48,338 - viktor - ha iniciado sesión
+2025-04-23 13:22:48,584 - viktor - ha iniciado sesión
+2025-04-23 13:28:01,535 - viktor - ha iniciado sesión
+2025-04-23 13:28:01,831 - viktor - ha iniciado sesión
+2025-04-23 13:28:17,482 - viktor - envió mensaje global: 'Real de madrid loco'
+2025-04-23 13:28:35,354 - viktor - envía mensaje global: 'Real de madrid loco' → ❌ no había clientes conectados
+2025-04-23 13:29:37,186 - viktor - elimina grupo: colchoneros
+2025-04-23 13:29:48,570 - viktor - ha cerrado sesión
+2025-04-23 18:42:44,647 - marin - ha iniciado sesión
+2025-04-23 18:42:44,889 - marin - ha iniciado sesión
+2025-04-23 18:44:16,892 - marin - envió mensaje global: 'Mensaje de Ejemplo'
+2025-04-23 18:44:26,143 - marin - envía mensaje global: 'Mensaje de Ejemplo' → destinatarios reales: ClienteVideo
+2025-04-23 18:46:47,309 - marin - ha iniciado sesión
+2025-04-23 18:46:47,562 - marin - ha iniciado sesión
+2025-04-23 18:49:43,389 - marin - ha cerrado sesión
+2025-04-23 18:52:19,699 - 📥 [CSV] Leyendo archivo: /tmp/tmp3vukqpw1.csv
+2025-04-23 18:52:19,700 - ➡️  Línea 1: ['SuperGrupo', ' Ana', ' Pepe', ' Lola']
+2025-04-23 18:52:19,700 - ➡️  Línea 2: ['OTROgrupo', ' Juana', ' Carlos']
+2025-04-23 18:52:19,700 - 📂 [CSV] Nuevos grupos encontrados: ['SuperGrupo', 'OTROgrupo']
+2025-04-23 18:52:19,701 - 📁 [CSV] Grupos actuales ya en sistema: ['norte', 'supergrupo', 'otrogrupo']
+2025-04-23 18:52:19,701 - 🚫 [CSV] Conflictos detectados: ['SuperGrupo', 'OTROgrupo']
+2025-04-23 18:56:10,468 - marin - ha iniciado sesión
+2025-04-23 18:56:10,712 - marin - ha iniciado sesión

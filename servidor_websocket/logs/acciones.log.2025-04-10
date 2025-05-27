@@ -1,0 +1,91 @@
+2025-04-10 09:18:01,702 - marin - ha iniciado sesión
+2025-04-10 09:18:01,942 - marin - ha iniciado sesión
+2025-04-10 09:18:11,570 - marin - elimina grupo: SuperGrupo
+2025-04-10 09:18:13,403 - marin - elimina grupo: OTROgrupo
+2025-04-10 09:18:15,786 - marin - elimina grupo: supergrupo
+2025-04-10 09:18:17,452 - marin - elimina grupo: FarmaciaPepe
+2025-04-10 09:18:19,596 - marin - ha cerrado sesión
+2025-04-10 09:19:32,934 - admin - importó 2 grupo(s) desde CSV
+2025-04-10 09:19:43,110 - admin - importó 1 grupo(s) desde CSV
+2025-04-10 09:19:50,534 - admin - importó 1 grupo(s) desde CSV
+2025-04-10 09:19:56,215 - admin - importó 0 grupo(s) desde CSV
+2025-04-10 09:23:25,266 - pedrito - ha iniciado sesión
+2025-04-10 09:23:25,504 - pedrito - ha iniciado sesión
+2025-04-10 09:23:29,064 - pedrito - ha cerrado sesión
+2025-04-10 09:23:50,539 - admin - importó 2 grupo(s) desde CSV
+2025-04-10 09:23:59,842 - admin - importó 1 grupo(s) desde CSV
+2025-04-10 09:24:05,100 - admin - importó 1 grupo(s) desde CSV
+2025-04-10 09:24:08,036 - admin - importó 1 grupo(s) desde CSV
+2025-04-10 09:24:14,517 - admin - importó 1 grupo(s) desde CSV
+2025-04-10 11:15:28,592 - admin - importó 1 grupo(s) desde CSV
+2025-04-10 13:13:45,225 - 📥 [CSV] Leyendo archivo: /tmp/tmp0k117mdc.csv
+2025-04-10 13:13:45,226 - ➡️  Línea 1: ['SuperGrupo', ' Ana', ' Pepe', ' Lola']
+2025-04-10 13:13:45,226 - ➡️  Línea 2: ['OTROgrupo', ' Juana', ' Carlos']
+2025-04-10 13:13:45,226 - 📂 [CSV] Nuevos grupos encontrados: ['SuperGrupo', 'OTROgrupo']
+2025-04-10 13:13:45,226 - 📁 [CSV] Grupos actuales ya en sistema: ['colchoneros', 'norte']
+2025-04-10 13:13:45,227 - ✅ [CSV] Se han importado correctamente: ['SuperGrupo', 'OTROgrupo']
+2025-04-10 13:13:45,227 - admin - ✅ se importaron correctamente 2 grupos desde el csv.
+2025-04-10 13:13:51,349 - 📥 [CSV] Leyendo archivo: /tmp/tmpg6x0ao3s.csv
+2025-04-10 13:13:51,350 - ➡️  Línea 1: ['supergrupo', ' Ana', ' Pepe']
+2025-04-10 13:13:51,350 - 📂 [CSV] Nuevos grupos encontrados: ['supergrupo']
+2025-04-10 13:13:51,350 - 📁 [CSV] Grupos actuales ya en sistema: ['colchoneros', 'norte', 'supergrupo', 'otrogrupo']
+2025-04-10 13:13:51,350 - 🚫 [CSV] Conflictos detectados: ['supergrupo']
+2025-04-10 13:14:00,308 - 📥 [CSV] Leyendo archivo: /tmp/tmpr6bi3bpk.csv
+2025-04-10 13:14:00,309 - ➡️  Línea 1: ['FarmaciaPepe', ' ana', ' Ana', ' ANa']
+2025-04-10 13:14:44,396 - 📥 [CSV] Leyendo archivo: /tmp/tmp3fx0bazs.csv
+2025-04-10 13:14:44,397 - ➡️  Línea 1: [' ', ' ana', ' juan']
+2025-04-10 13:34:59,730 - viktor - ha iniciado sesión
+2025-04-10 13:34:59,972 - viktor - ha iniciado sesión
+2025-04-10 13:45:43,690 - pedrito - ha iniciado sesión
+2025-04-10 13:45:43,934 - pedrito - ha iniciado sesión
+2025-04-10 13:52:20,293 - marin - ha iniciado sesión
+2025-04-10 13:52:20,533 - marin - ha iniciado sesión
+2025-04-10 13:55:53,474 - viktor - ha iniciado sesión
+2025-04-10 13:55:53,718 - viktor - ha iniciado sesión
+2025-04-10 16:43:29,496 - viktor - ha iniciado sesión
+2025-04-10 16:43:29,735 - viktor - ha iniciado sesión
+2025-04-10 16:43:44,191 - viktor - actualizó las frases predefinidas (limpieza aplicada)
+2025-04-10 16:46:01,743 - viktor - ha iniciado sesión
+2025-04-10 16:46:01,987 - viktor - ha iniciado sesión
+2025-04-10 16:46:25,324 - viktor - actualizó las frases predefinidas (limpieza aplicada)
+2025-04-10 16:46:27,149 - viktor - actualizó las frases predefinidas (limpieza aplicada)
+2025-04-10 18:16:27,680 - marin - ha iniciado sesión
+2025-04-10 18:16:33,455 - viktor - ha iniciado sesión
+2025-04-10 18:16:33,697 - viktor - ha iniciado sesión
+2025-04-10 18:16:38,555 - viktor - envió mensaje global: 'holaaaaa'
+2025-04-10 18:20:53,826 - marin - ha iniciado sesión
+2025-04-10 18:20:59,476 - viktor - ha iniciado sesión
+2025-04-10 18:20:59,722 - viktor - ha iniciado sesión
+2025-04-10 18:21:05,546 - marin - envió mensaje global: 'Precioso'
+2025-04-10 18:37:28,451 - viktor - ha cerrado sesión
+2025-04-10 18:37:39,032 - marin - ha iniciado sesión
+2025-04-10 18:37:39,281 - marin - ha iniciado sesión
+2025-04-10 18:37:46,243 - marin - envió mensaje global: 'que tal prueba 3'
+2025-04-10 18:40:48,107 - 📥 [CSV] Leyendo archivo: /tmp/tmpkvpvnlvl.csv
+2025-04-10 18:40:48,107 - ➡️  Línea 1: ['SuperGrupo', ' Ana', ' Pepe', ' Lola']
+2025-04-10 18:40:48,107 - ➡️  Línea 2: ['OTROgrupo', ' Juana', ' Carlos']
+2025-04-10 18:40:48,108 - 📂 [CSV] Nuevos grupos encontrados: ['SuperGrupo', 'OTROgrupo']
+2025-04-10 18:40:48,108 - 📁 [CSV] Grupos actuales ya en sistema: ['colchoneros', 'norte']
+2025-04-10 18:40:48,109 - ✅ [CSV] Se han importado correctamente: ['SuperGrupo', 'OTROgrupo']
+2025-04-10 18:40:48,109 - admin - ✅ se importaron correctamente 2 grupos desde el csv.
+2025-04-10 18:40:53,934 - 📥 [CSV] Leyendo archivo: /tmp/tmp4pmyfc8h.csv
+2025-04-10 18:40:53,935 - ➡️  Línea 1: ['supergrupo', ' Ana', ' Pepe']
+2025-04-10 18:40:53,935 - 📂 [CSV] Nuevos grupos encontrados: ['supergrupo']
+2025-04-10 18:40:53,935 - 📁 [CSV] Grupos actuales ya en sistema: ['colchoneros', 'norte', 'supergrupo', 'otrogrupo']
+2025-04-10 18:40:53,936 - 🚫 [CSV] Conflictos detectados: ['supergrupo']
+2025-04-10 18:41:07,103 - 📥 [CSV] Leyendo archivo: /tmp/tmprv2izi1k.csv
+2025-04-10 18:41:07,104 - ➡️  Línea 1: ['FarmaciaPepe', ' ana', ' Ana', ' ANa']
+2025-04-10 18:41:33,178 - viktor - ha iniciado sesión
+2025-04-10 18:42:16,193 - viktor - envió mensaje global: 'rfgee'
+2025-04-10 18:47:39,435 - viktor - ha iniciado sesión
+2025-04-10 18:47:39,690 - viktor - ha iniciado sesión
+2025-04-10 18:51:27,918 - marin - ha iniciado sesión
+2025-04-10 18:51:28,166 - marin - ha iniciado sesión
+2025-04-10 18:56:57,935 - viktor - ha iniciado sesión
+2025-04-10 18:56:58,182 - viktor - ha iniciado sesión
+2025-04-10 19:00:18,574 - viktor - ha iniciado sesión
+2025-04-10 19:00:18,830 - viktor - ha iniciado sesión
+2025-04-10 19:08:23,591 - marin - ha iniciado sesión
+2025-04-10 19:08:23,853 - marin - ha iniciado sesión
+2025-04-10 19:18:11,595 - marin - ha iniciado sesión
+2025-04-10 19:18:11,857 - marin - ha iniciado sesión
